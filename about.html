@@ -1,26 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>About Me - My Portfolio</title>
-  <link rel="stylesheet" href="styles.css" />
-</head>
-<body>
-  <nav>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html" class="active">About Me</a></li>
-      <li><a href="projects.html">Projects</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>About Me - My Portfolio</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      /* Minimal, safe inline styles in case styles.css doesn't handle layout */
+      .about-container { display: grid; grid-template-columns: 140px 1fr; gap: 1rem; align-items: start; }
+      .about-photo { width: 140px; height: 140px; object-fit: cover; border-radius: 50%; border: 2px solid #eee; }
+      @media (max-width: 600px) { .about-container { grid-template-columns: 1fr; } }
+      .skills-list { columns: 2; column-gap: 2rem; }
+      .skills-list li { break-inside: avoid; padding: 2px 0; }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html" class="active">About Me</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
 
-  <section>
-    <h1>About Me</h1>
-    <p>A brief introduction about myself, my background, skills, and passions.</p>
-    <!-- Students can add more personal details here -->
-  </section>
+    <section>
+      <h1>About Me</h1>
 
-</body>
+      <div class="about-container">
+        <!-- Profile photo beside the About text -->
+        <img src="profile.jpg" alt="Portrait of Alma Mugure smiling" class="about-photo" />
+
+        <div>
+          <p>
+            Hi! I’m Alma Mugure, a Bachelor of Science in Informatics and Computer
+            Science student at Strathmore University (2022–2026). I focus on software
+            engineering and have a growing passion for cybersecurity. I’ve made the
+            Dean’s List and enjoy collaborating on projects that create real-world
+            impact in my community.
+          </p>
+
+          <p>
+            Beyond the classroom, I’ve led and served in several roles with AIESEC,
+            including Accommodations Manager and Head of Logistics for organizing
+            committees. I’ve also worked with @iLabAfrica as a Data Science Intern and
+            contributed to community initiatives like Linda Watoto and education
+            volunteering in Athi River.
+          </p>
+
+          <p>
+            I’m building products that matter. I developed <em>Eunoia</em>, a mental
+            health platform, and I’m working on <em>Tutoria</em>, a peer‑to‑peer learning
+            app for Strathmore students. For my final‑year project, I’m researching a
+            culturally sensitive NLP‑based menstrual health chatbot tailored for Kenyan
+            youth.
+          </p>
+        </div>
+      </div>
+
+      <h2>Skills & Technologies</h2>
+      <p>
+        I enjoy turning ideas into reliable, user‑friendly software. Here are tools and
+        technologies I work with regularly:
+      </p>
+      <ul class="skills-list">
+        <li>Programming: Python, Java, Kotlin (Android), JavaScript/TypeScript</li>
+        <li>Web & Mobile: React, HTML, CSS, Android (Jetpack)</li>
+        <li>Data & ML: Pandas, NumPy, scikit‑learn, basic NLP pipelines</li>
+        <li>Databases: PostgreSQL, MySQL, SQLite</li>
+        <li>Dev Tools: Git/GitHub, Docker (basics), VS Code</li>
+        <li>Practices: REST APIs, testing, agile teamwork</li>
+      </ul>
+
+      <h2>Hobbies, Passions & Goals</h2>
+      <p>
+        Music keeps me grounded—I play guitar (no capo squad ✊) and I’m part of my
+        church’s worship team. I also love mentoring peers, running fun team‑building
+        games, and contributing to student communities.
+      </p>
+      <p>
+        I’m passionate about AI for social good, responsible tech, and building tools
+        that improve everyday life in Kenya and beyond. Short‑term, I’m sharpening my
+        ML and security fundamentals; long‑term, I want to lead engineering teams that
+        ship inclusive, privacy‑respecting products.
+      </p>
+      <p>
+        When I’m not coding or practicing guitar, you’ll find me exploring UX ideas,
+        learning to play more by ear, and experimenting with small data projects that
+        turn curiosity into insight.
+      </p>
+    </section>
+  </body>
 </html>
